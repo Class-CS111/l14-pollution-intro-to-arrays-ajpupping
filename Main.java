@@ -81,15 +81,12 @@ for(int i = 0 ; i < years.length; i++) {
     System.out.print("Year");
     UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
 
-    for(int i = 0; i < size; i++) {
-      System.out.print(years[i]);
-      Main.printBar(co2Levels[i]);
-    }
+    Main.printGraph(co2Levels, years);
 
   }
 /**
  * prints a drum emoji for every whole number over 360
- * @param data co2 level
+ * @param data co2 levels
  */
 
   public static void printBar(double data) {
@@ -99,5 +96,18 @@ for(int i = 0 ; i < years.length; i++) {
     }
     System.out.println(" " + data);
   }
+
+  /**
+   * Method to print graph
+   */
+
+   public static void printGraph (double[] dataValues, int[] yearValues)
+   {
+
+    for(int i = 0; i < dataValues.length; i++) {
+      System.out.print(yearValues[i]);
+      Main.printBar(dataValues[i]);
+    }
+   }
 
 }
