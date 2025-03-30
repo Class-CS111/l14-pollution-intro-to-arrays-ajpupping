@@ -73,9 +73,6 @@ for(int i = 0 ; i < years.length; i++) {
 		// PROCESSING SECTION
 
 		// OUTPUT SECTION
-    for(int i = 0; i < size; i++){
-      System.out.printf("Year %d = %f ppm, ", years[i], co2Levels[i]);
-    }
   
     //Explanation of oil drum units
     System.out.println("\nData displayed for each year begins at 360 ppm.\nEach additional oil drum (🛢 ) represents an additional 10 ppm.\n");
@@ -84,6 +81,19 @@ for(int i = 0 ; i < years.length; i++) {
     System.out.print("Year");
     UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
 
+    Main.printBar(390.62);
+
   }
+
+  public static void printBar(double data) {
+    int numDrums = (int)(data - 360);
+    // testing
+    System.out.println("Number of drums is: " + numDrums);
+  }
+
+    // testing array
+    // for(int i = 0; i < size; i++){
+    //   System.out.printf("Year %d = %f ppm, ", years[i], co2Levels[i]);
+    // }
 
 }
