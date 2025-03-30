@@ -37,6 +37,7 @@ class Main
     int size = 20;
     double[] co2Levels = new double[size];
     int[] years = new int[size];
+  
 
 // Array data    
 
@@ -83,6 +84,10 @@ for(int i = 0 ; i < years.length; i++) {
 
     Main.printGraph(co2Levels, years);
 
+    double difference = co2Levels[size-1] - co2Levels[0];
+    System.out.printf("\nFrom %d to %d the average atmospheric CO₂ levels across the globe has grown %.2f ppm.\n", 
+    years[0], years[years.length-1], difference);
+
   }
 /**
  * prints a drum emoji for every whole number over 360
@@ -109,5 +114,6 @@ for(int i = 0 ; i < years.length; i++) {
       Main.printBar(dataValues[i]);
     }
    }
+
 
 }
