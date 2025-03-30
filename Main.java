@@ -81,19 +81,23 @@ for(int i = 0 ; i < years.length; i++) {
     System.out.print("Year");
     UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
 
-    Main.printBar(390.62);
+    for(int i = 0; i < size; i++) {
+      System.out.print(years[i]);
+      Main.printBar(co2Levels[i]);
+    }
 
   }
+/**
+ * prints a drum emoji for every whole number over 360
+ * @param data co2 level
+ */
 
   public static void printBar(double data) {
     int numDrums = (int)(data - 360);
-    // testing
-    System.out.println("Number of drums is: " + numDrums);
+    for(int i = 0; i < numDrums; i++) {
+      System.out.print("🛢");
+    }
+    System.out.println(" " + data);
   }
-
-    // testing array
-    // for(int i = 0; i < size; i++){
-    //   System.out.printf("Year %d = %f ppm, ", years[i], co2Levels[i]);
-    // }
 
 }
